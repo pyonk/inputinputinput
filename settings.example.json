@@ -1,0 +1,25 @@
+{
+  "options": [
+    {
+      "targetUrl": "http://localhost/*/edit",
+      "matches": {
+        "input_selector": {
+          "type": "input",
+          "value": "100000"
+        },
+        "radio_selector": {
+          "type": "radio",
+          "value": "true"
+        },
+        "select_selector": {
+          "type": "select",
+          "value": "2020"
+        },
+        "random_select_selector": {
+          "type": "select",
+           "random": true
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Option</title>
+        <script src="./scripts/options.js"></script>
+        <style>
+            body {
+                margin: 0;
+                height: 100vh;
+            }
+            .wrapper {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+            }
+            [name=option] {
+                width: 100%;
+                height: 100%;
+                resize: none;
+            }
+            button {
+                margin: 16px auto;
+                display: inline-block;
+                width: 180px;
+                padding: 8px 24px;
+                line-height: 1.8;
+                font-size: 14px;
+                border: 2px solid #d0e8f2;
+                border-radius: 8px;
+                background-color: #d0e8f2;
+                color: #456268;
+                appearance: none;
+                cursor: pointer;
+            }
+            .torst {
+                position: fixed;
+                display: inline-block;
+                padding: 8px 12px;
+                top: 10%;
+                right: 10%;
+                background-color: #456268;
+                color: #d0e8f2;
+                border-radius: 8px;
+                box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 0.2);
+                cursor: pointer;
+                opacity: 1;
+            }
+            .torst.inactive {
+                opacity: 0;
+                transition: opacity 0.3s linear;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <textarea name="option" id="option" cols="30" rows="10"></textarea>
+            <button type="button" id="optionSubmit">設定</button>
+        </div>
+    </body>
+</html>
