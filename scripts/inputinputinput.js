@@ -4,6 +4,11 @@ chrome.storage.local.get({[location.hostname]: {}}, function(result) {
             const config = result[location.hostname][key];
             for (const [selector, option] of Object.entries(config)) {
                 switch (option.type) {
+                    case 'script':
+                        var targetElem = document.querySelector(selector);
+                        const script = option.value.replace('{element}', 'arguments[0]');
+                        Function(script)(targetElem);
+                        break;
                     case 'date':
                     case 'input':
                         var targetElem = document.querySelector(selector);
